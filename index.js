@@ -14,15 +14,13 @@ function convertToRoman(num) {
 
       let divisorCount = Math.floor(arabicNum / arabicArr[i]);
 
-      console.log(divisorCount);
-
       for(let j = 0; j < divisorCount; j++){
         
         romanNum.push(romanArr[i]);
           
       }
 
-      arabicNum -= (arabicNum % arabicArr[i]);
+      arabicNum = arabicNum % arabicArr[i];
       
     }
     else{
@@ -37,4 +35,6 @@ function convertToRoman(num) {
   return romanNumStr
 }
 
-convertToRoman(6);
+convertToRoman(10);
+
+// Completed
